@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>User Story</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>User Stories</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acceptance Criteria --></label>
+        <name>Acceptance_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- As a --></label>
+        <name>As_a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned BA --></label>
+        <name>Assigned_BA__c</name>
+        <relationshipLabel><!-- User Stories (Assigned BA) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned Date --></label>
+        <name>Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Developer --></label>
+        <name>Assigned_Developer__c</name>
+        <relationshipLabel><!-- User Stories (Assigned Developer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned QA Date --></label>
+        <name>Assigned_QA_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned QA --></label>
+        <name>Assigned_QA__c</name>
+        <relationshipLabel><!-- User Stories (Assigned QA) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Objective --></label>
+        <name>Business_Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Hours --></label>
+        <name>Estimated_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- I want to --></label>
+        <name>I_want_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sprint --></label>
+        <name>Sprint__c</name>
+        <relationshipLabel><!-- User Stories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Analysis</masterLabel>
+            <translation><!-- In Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In SAT(QA)</masterLabel>
+            <translation><!-- In SAT(QA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready For SAT</masterLabel>
+            <translation><!-- Ready For SAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing Done</masterLabel>
+            <translation><!-- Testing Done --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Story Points --></label>
+        <name>Story_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub-Status --></label>
+        <name>Sub_Status__c</name>
+        <picklistValues>
+            <masterLabel>Doing</masterLabel>
+            <translation><!-- Doing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Done</masterLabel>
+            <translation><!-- Done --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wire Frames --></label>
+        <name>Wire_Frames__c</name>
+    </fields>
+    <layouts>
+        <layout>User Story Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

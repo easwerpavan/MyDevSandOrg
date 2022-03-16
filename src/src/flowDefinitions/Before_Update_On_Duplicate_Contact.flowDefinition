@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>Whenever a new Contact record is inserted in Salesforce, we need to check if that has a linked Account or not(Basically while creating contact did user provide any account in the Account lookup field of contact) . If the contact was created with an Account populated, then we need to check if this particular Account has any other Contact (child record) with same name as of this newly inserted contact or not. If any existing contact with same name is found for the Account, we need to prevent this new Contact creation.
+
+New Contact Inserted (Example- Name: John and Account Name : Apple) --&gt; Check if this Account (Apple) has any other Contact already with same Name (John) -- &gt; If such a Contact is found for the Account (Apple), stop the insertion/creation of this new Contact Record (John).</description>
+    <masterLabel>Before SaveOn Duplicate Contact</masterLabel>
+</FlowDefinition>

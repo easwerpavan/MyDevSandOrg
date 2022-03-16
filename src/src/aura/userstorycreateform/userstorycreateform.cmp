@@ -1,0 +1,63 @@
+<aura:component controller="userstoryrecordapexctrl" implements="flexipage:availableForAllPageTypes,lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+    <aura:attribute name="selectedSprintLookUpRecord" type="sObject" default="{}"/> 
+    <aura:attribute name="selectedUsLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="selectedqaLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="selectedbaLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="objusstory" type="User_Story__c" default="{'sobjectType':'User_Story__c'}"/>
+    <aura:attribute name="Status" type="Map"/>
+    <aura:attribute name="subStatus" type="Map"/>
+    <aura:attribute name="dependent" type="Map"/>
+    <aura:attribute name="disable" type="boolean" Default = "true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    <lightning:navigation aura:id="navService"/>
+      
+   <lightning:card class="slds-box" > 
+   <div class="slds-m-around_large" >
+   <lightning:layout horizontalAlign= "space" > 
+   <lightning:layoutItem size="5" padding= "around-small">
+   <Lightning:input type="text" name="Name" value="{!v.objusstory.Name}" label="Name" />
+   <Lightning:input type="text" name="asa" value="{!v.objusstory.As_a__c}" label="As a" /> 
+   <Lightning:inputRichText labelVisible="true" label="I Want To" value="{!v.objusstory.I_want_to__c}" />
+   <Lightning:input type="Long Text Area" name="Description" value="{!v.objusstory.Description__c}" label="Description"/>
+   <c:customLookup objectAPIName="Sprint__c" IconName="standard:account" label="Sprint" selectedRecord="{!v.selectedSprintLookUpRecord}"/>
+   <Lightning:input type="Number" name="Estimated Hours" value="{!v.objusstory.Estimated_Hours__c}" label="Estimated Hours" />
+   <Lightning:input type="Number" name="Story Points" value="{!v.objusstory.Story_Points__c}" label="Story Points" />  
+   <Lightning:inputRichText labelVisible="true" label="Acceptance Criteria" value="{!v.objusstory.Acceptance_Criteria__c}" />  
+   <Lightning:input type="text" name="Business Objective" value="{!v.objusstory.Business_Objective__c}" label="Business" /> 
+
+       <Lightning:inputRichText labelVisible="true" label="Wire Frames" value="{!v.objusstory.Wire_Frames__c}" />  
+  
+   </lightning:layoutItem>  
+              
+   <lightning:layoutItem size="5" padding= "around-small">
+   <c:customLookup objectAPIName="User"  IconName="standard:account" label="Assigned Developer" selectedRecord="{!v.selectedUsLookUpRecord}"/>
+   <Lightning:input type="DateTime" name="Assigned Date" value="{!v.objusstory.Assigned_Date__c}" label="Assigned Date" />
+   <Lightning:input type="DateTime" name="Due Date" value="{!v.objusstory.Due_Date__c}" label="Due Date" />
+   <c:customLookup objectAPIName="User" IconName="standard:event" label="Assigned QA" selectedRecord="{!v.selectedqaLookUpRecord}"/>
+   <c:customLookup objectAPIName="User" IconName="standard:account" label="Assigned BA" selectedRecord="{!v.selectedbaLookUpRecord}"/>          
+   <Lightning:input type="DateTime" name="Assigned QA Date" value="{!v.objusstory.Assigned_QA_Date__c}" label="Assigned QA Date" /> 
+
+    <lightning:select aura:id="statusPicklist" value="{!v.objusstory.Status__c}" onchange="{!c.handleStatusOnChange}" name="statusPicklist" label="Status" >
+      <aura:iteration items="{!v.Status}" var="ind" indexVar="key">
+        <option text="{!ind.value}" value="{!ind.key}" selected="{!ind.key==v.objusstory.Status__c}" />
+      </aura:iteration>
+    </lightning:select>
+              
+    <lightning:select value="{!v.objusstory.Sub_Status__c}"  name="substatusPicklist" label="Sub-Status" disabled="{!v.disable}">
+        <aura:iteration items="{!v.subStatus}" var="ind" indexVar="key"> 
+         <option text="{!ind.value}" value="{!ind.key}" selected="{!ind.key==v.objusstory.Sub_Status__c}" />   
+           
+        </aura:iteration>
+    </lightning:select>    
+   
+       </lightning:layoutItem> 
+    </lightning:layout>
+  <br/> 
+  </div> 
+    
+  <div class="slds-align_absolute-center" role="group">  
+  <lightning:button variant="brand" name="update" label="Save" onclick="{!c.saveUserStoryRecord}" />
+  </div>
+    
+ </lightning:card>    
+</aura:component>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Employee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Employees</value>
+    </caseValues>
+    <fields>
+        <label><!-- Aadhar Number --></label>
+        <name>LMS_Aadhar_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomplishments --></label>
+        <name>LMS_Accomplishments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Awards --></label>
+        <name>LMS_Awards__c</name>
+    </fields>
+    <fields>
+        <label><!-- CTC(Cost to Company) --></label>
+        <name>LMS_CTC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Joining --></label>
+        <name>LMS_Date_of_Joining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Releasing --></label>
+        <name>LMS_Date_of_Releasing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of birth --></label>
+        <name>LMS_Date_of_birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>LMS_Department__c</name>
+        <picklistValues>
+            <masterLabel>Administration</masterLabel>
+            <translation><!-- Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>App Development</masterLabel>
+            <translation><!-- App Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation><!-- HR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Designation --></label>
+        <name>LMS_Designation__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate Software Engineer</masterLabel>
+            <translation><!-- Associate Software Engineer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Analyst</masterLabel>
+            <translation><!-- Business Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Associate</masterLabel>
+            <translation><!-- Business Associate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Consultant</masterLabel>
+            <translation><!-- Business Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation><!-- Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation><!-- HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manager</masterLabel>
+            <translation><!-- Manager --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>LMS_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Code --></label>
+        <name>LMS_Employee_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employement Type --></label>
+        <name>LMS_Employement_Type__c</name>
+        <picklistValues>
+            <masterLabel>C2H(Contract to Hire)</masterLabel>
+            <translation><!-- C2H(Contract to Hire) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTE(Full Time Employee)</masterLabel>
+            <translation><!-- FTE(Full Time Employee) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTH(Fixed Term Hire)</masterLabel>
+            <translation><!-- FTH(Fixed Term Hire) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Absents --></label>
+        <name>LMS_Number_of_Absents__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAN Number --></label>
+        <name>LMS_PAN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- PF Account Number --></label>
+        <name>LMS_PF_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Experience --></label>
+        <name>LMS_Previous_Experience__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>LMS_Project__c</name>
+        <picklistValues>
+            <masterLabel>LMS</masterLabel>
+            <translation><!-- LMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Story</masterLabel>
+            <translation><!-- User Story --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>LMS_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Active</masterLabel>
+            <translation><!-- In-Active --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UAN Number --></label>
+        <name>LMS_UAN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Location --></label>
+        <name>LMS_Work_Location__c</name>
+        <picklistValues>
+            <masterLabel>Bangalore</masterLabel>
+            <translation><!-- Bangalore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chennai</masterLabel>
+            <translation><!-- Chennai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delhi</masterLabel>
+            <translation><!-- Delhi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hyderabad</masterLabel>
+            <translation><!-- Hyderabad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Work Type --></label>
+        <name>LMS_Work_Type__c</name>
+        <picklistValues>
+            <masterLabel>Client</masterLabel>
+            <translation><!-- Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On-Site</masterLabel>
+            <translation><!-- On-Site --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Skill set --></label>
+        <name>Skill_set__c</name>
+        <picklistValues>
+            <masterLabel>Devops</masterLabel>
+            <translation><!-- Devops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Java</masterLabel>
+            <translation><!-- Java --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Javascript</masterLabel>
+            <translation><!-- Javascript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Employee Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- General Info --></label>
+            <section>General Info</section>
+        </sections>
+        <sections>
+            <label><!-- Professional Information --></label>
+            <section>Professional Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please Enter Valid Aadhar Number --></errorMessage>
+        <name>Aadhar_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Valid PAN Number --></errorMessage>
+        <name>PAN_Validation_10_Numbers</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Valid PF Account Number --></errorMessage>
+        <name>PF_Validation_Rule</name>
+    </validationRules>
+</CustomObjectTranslation>

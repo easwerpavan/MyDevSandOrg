@@ -1,0 +1,22 @@
+<aura:component  controller="opportunityclass" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >  
+    <aura:attribute name="conobject" type="Contact[]"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:attribute name="selectedconrec" type="Contact[]"/>
+     
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/> 
+      
+      <aura:registerEvent name="contactevent" type="c:contactevent"/>    
+    
+    <lightning:card  title="Contacts">
+       
+ <lightning:button variant="brand" label="Delete"  onclick="{! c.deleterecord}" />
+       <lightning:datatable 
+                            keyField="id"
+                            data="{!v.conobject}"
+                            columns="{!v.columns}"
+                            hidecheckboxColumn="false"
+                            onrowselection="{!c.handleSelect}"/> 
+                            
+   </lightning:card>  
+</aura:component>

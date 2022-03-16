@@ -1,0 +1,21 @@
+<aura:component  controller="bugrecords" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >  
+    <aura:attribute name="bugobject" type="Bug__c[]"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="selectedbugrec" type="Bug__c[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    
+    <aura:registerEvent name="bugevent" type="c:bugevent"/> 
+    
+    <lightning:card  title="Bugs">
+        
+        <lightning:button variant="brand" label="Delete"  onclick="{! c.deleterecord}" />
+        <lightning:datatable 
+                             keyField="id"
+                             data="{!v.bugobject}"
+                             columns="{!v.columns}"
+                             hidecheckboxColumn="false"
+                             onrowselection="{!c.handleSelect}"/> 
+        
+    </lightning:card>  
+</aura:component>

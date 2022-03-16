@@ -1,0 +1,27 @@
+.THIS .slds-table .slds-row-number:after {
+    content: counter(none) !important ;
+    display: none !important ;
+}
+.THIS .slds-table tr th:first-child{
+    width: 0px !important;
+}
+.THIS .slds-button_icon-bare{
+    display: none;
+}
+.THIS .myCss thead th span{
+    background-color: #3258a8;
+    color: white;
+}
+.THIS .myCss td {
+    background-color: #fffbdb;
+    color: black;
+}
+.THIS .myCss tr {
+    background-color: #fffbdb;
+    color: black;
+}
+.THIS .myCss td:hover {
+    background-color: #ffed63 !important;
+    color: black !important;
+    font-weight:bold !important;
+}

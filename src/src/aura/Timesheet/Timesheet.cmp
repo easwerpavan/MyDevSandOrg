@@ -1,0 +1,32 @@
+<aura:component  controller="timesheet" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="data" type="timesheet.dataTableValues"/>
+    <aura:attribute name="completeData" type="timesheet.wrapperObj"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="month" type="Date" />
+    <aura:attribute name="username" type="string" />
+    <aura:attribute name="greetings" type="string" />
+    <aura:attribute name="rangeofdate" type="Date" />
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="tymsheetrecId" type="string" />          
+    <aura:handler name="init" value="{! this }" action="{!c.init }" />
+     
+    <aura:if isTrue="{!v.loaded }">          
+        <lightning:spinner alternativeText="Loading" />
+        <aura:set attribute = "else">             
+            <lightning:card > 
+                <aura:set attribute="title" >
+                    <div class="slds-text-headng_large">WELCOME {!v.username}<br/> </div>
+                    <div class="slds-text-headng_large">{!v.greetings}</div>    
+                </aura:set> 
+                <header class="slds-modal__header"> Time Sheet For The Month {!v.month} ({!v.rangeofdate.EM_Start_Date__c} TO {!v.rangeofdate.EM_End_Date__c})  </header>
+                <lightning:datatable aura:id="tymsheet"
+                                     keyField="id"
+                                     data="{!v.data}"
+                                     columns="{!v.columns}" 
+                                     class="myCss"
+                                     hideCheckboxColumn="true"               
+                                     onsave="{!c.onsavebutton}" />               
+            </lightning:card>
+        </aura:set>
+    </aura:if>
+</aura:component>

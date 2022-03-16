@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TRANSACTION LINE ITEM</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transaction line items</value>
+    </caseValues>
+    <fields>
+        <label><!-- TRANSACTION --></label>
+        <name>TRANSACTION__c</name>
+        <relationshipLabel><!-- Transaction line items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transaction line item NAME --></label>
+        <name>Transaction_line_item__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

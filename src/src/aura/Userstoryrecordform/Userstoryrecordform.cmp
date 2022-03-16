@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+ <lightning:card > 
+ <lightning:recordEditForm aura:id="userstory" onsuccess="{!c.handleOnSuccess}" 
+                           objectApiName="User_Story__c" >
+ 
+ <lightning:layout horizontalAlign= "space" >
+ <lightning:layoutItem size="5" padding= "around-small" >
+ <lightning:inputField fieldName="As_a__c" />     
+ <lightning:inputField fieldName="I_want_to__c" />
+ <lightning:inputField fieldName="Description__c" />
+ <lightning:inputField fieldName="Sprint__c" />
+ <lightning:inputField fieldName="Estimated_Number__c" />
+ <lightning:inputField fieldName="Story_Point__c" />
+ <lightning:inputField fieldName="Acceptance_Criteria__c" />
+ <lightning:inputField fieldName="Business_Objective__c" />
+ <lightning:inputField fieldName="Wire_Frames__c" />
+ </lightning:layoutItem> 
+ 
+ <lightning:layoutItem size="5" padding= "around-small">
+ <lightning:inputField fieldName="Assigned_DevDate__c" />
+ <lightning:inputField fieldName="Due_Date__c" />
+ <lightning:inputField fieldName="Assigned_Developer__c" />
+ <lightning:inputField fieldName="Assigned_BA__c" />
+ <lightning:inputField fieldName="Assigned_QA__c" />
+ <lightning:inputField fieldName="Assigned_QA_Date__c" /> 
+ <lightning:inputField fieldName="Sub_Status__c" />
+ </lightning:layoutItem>
+ <lightning:inputField class="slds-hidden" aura:id="status" fieldName="Status__c" />
+ </lightning:layout>
+ 
+ <div class="slds-align_absolute-center" role="group">
+ <lightning:button onclick="{!c.handleOnSubmit}" label="Save as Draft" variant="brand" type="submit" name="update" />
+ <lightning:button variant="brand" name="update" label="Save" onclick="{!c.onclickhandle}" />
+ </div>
+  
+ </lightning:recordEditForm>
+ <lightning:navigation aura:id="navService"/>
+ </lightning:card>
+</aura:component>

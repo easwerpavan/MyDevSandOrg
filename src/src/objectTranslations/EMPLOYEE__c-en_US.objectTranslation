@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>EMPLOYEE</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>EMPLOYEES</value>
+    </caseValues>
+    <fields>
+        <label><!-- CANDIDATE --></label>
+        <name>CANDIDATE__c</name>
+        <relationshipLabel><!-- EMPLOYEES --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- COURSE --></label>
+        <name>COURSE__c</name>
+        <picklistValues>
+            <masterLabel>AWS</masterLabel>
+            <translation><!-- AWS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZURE</masterLabel>
+            <translation><!-- AZURE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEVOPS</masterLabel>
+            <translation><!-- DEVOPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC</masterLabel>
+            <translation><!-- SFDC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- EMPLOYEES --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- EXPERIENCE --></label>
+        <name>EXPERIENCE__c</name>
+    </fields>
+    <fields>
+        <label><!-- JOB STATUS --></label>
+        <name>JOB_STATUS__c</name>
+        <picklistValues>
+            <masterLabel>HR SELECTED</masterLabel>
+            <translation><!-- HR SELECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR-REJECTED</masterLabel>
+            <translation><!-- HR-REJECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L1-REJECTED</masterLabel>
+            <translation><!-- L1-REJECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L1-SELECTED</masterLabel>
+            <translation><!-- L1-SELECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L2-REJECTED</masterLabel>
+            <translation><!-- L2-REJECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L2-SELECTED</masterLabel>
+            <translation><!-- L2-SELECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFER LETTER APRROVED</masterLabel>
+            <translation><!-- OFFER LETTER APRROVED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RECALLED</masterLabel>
+            <translation><!-- RECALLED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBMITTED</masterLabel>
+            <translation><!-- SUBMITTED --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>EMPLOYEE Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,59 @@
+<aura:component controller="contacteditrecord" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:attribute name="EditContact" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:attribute name="selectedAccountlookup" type="sObject" default="{}"/>
+    <aura:attribute name="fieldMap" type="Map"/>
+    <aura:attribute name="accountId" type="string" default=""/>
+    <aura:attribute name="conRecordId" type="string" default=""/>
+    <aura:attribute name="onLoadDone" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navService" />   
+    <aura:if isTrue="{!v.onLoadDone}">    
+        <lightning:card class="slds-box" > 
+            <div class="slds-m-around_large" >
+                <div class="custom-color" >
+                    <lightning:layout horizontalAlign= "space" > 
+                        <lightning:layoutItem size="5" padding= "around-small">
+                            <Lightning:input type="Name" name="Name" value="{!v.EditContact.FirstName}" label="Enter your FirstName" />
+                            <Lightning:input type="Name" name="Name" value="{!v.EditContact.LastName}" label="Enter your LastName" />                       
+                            <c:customLookup objectAPIName="Account" IconName="standard:account" label="Please select your Account" recordid="{!v.accountId}" objRecordid="{!v.conRecordId}" selectedRecord="{!v.selectedAccountlookup}"/>
+                            <Lightning:input type="Text" name="ACCOUNT_NUMBER" value="{!v.EditContact.ACCOUNT_NUMBER__c}" label="Fill your Account number" />
+                            <Lightning:input type="Phone" name="phone" value="{!v.EditContact.Phone}" label="Phone number to Contact you" />
+                            <Lightning:input type="Phone" name="mobilephone" value="{!v.EditContact.MobilePhone}" label="Alternative Mobile number" />
+                            <Lightning:input type="Email" name="Email" value="{!v.EditContact.Email}" label="Email Address for Verification" />
+                            <Lightning:input type="Fax" name="Fax" value="{!v.EditContact.Fax}" label="Company fax number" />                    
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="5" padding= "around-small">
+                            <lightning:select aura:id="statusPicklist" value="{!v.EditContact.LeadSource}" onchange="{!c.handleOnChange}" name="Picklist" label="Lead Source">
+                                <option value="">--None--</option>
+                                <aura:iteration items="{!v.fieldMap}" var="i" indexVar="key">
+                                    <option text="{!i.value}" value="{!i.key}" selected="{!i.key==v.EditContact.LeadSource}" />
+                                </aura:iteration>
+                            </lightning:select>  
+                            <Lightning:input type="Date" name="Birthdate" value="{!v.EditContact.Birthdate}" label="What is your Birthdate" />
+                            <Lightning:input type="MailingStreet" name="MailingStreet" value="{!v.EditContact.MailingStreet}" label="Street Address" />
+                            <Lightning:input type="MailingCity" name="MailingCity" value="{!v.EditContact.MailingCity}" label="City" />
+                            <Lightning:input type="MailingState" name="MailingState" value="{!v.EditContact.MailingState}" label="State" />
+                            <Lightning:input type="MailingCountry" name="MailingCountry" value="{!v.EditContact.MailingCountry}" label="Country" />
+                            <Lightning:input type="MailingPostalCode" name="MailingPostalCode" value="{!v.EditContact.MailingPostalCode}" label="ZipCode" />                  
+                            <Lightning:input type="Text" name="Department" value="{!v.EditContact.Department}" label="You want to change your department" />                        
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+            </div>
+            <div class="slds-align_absolute-center" role="group">  
+                <lightning:button variant="brand" name="update" label="Save" onclick="{!c.saveUserStoryRecord}" />
+            </div>            
+            <aura:html tag="style">
+                .slds-modal__content {
+                overflow: initial !important;
+                height: 107% !important;
+                max-height: 200% !important;
+                }
+                .slds-modal__container{
+                max-width: 99% !important;
+                width:99% !important;
+                }
+            </aura:html>            
+        </lightning:card>          
+    </aura:if>
+</aura:component>

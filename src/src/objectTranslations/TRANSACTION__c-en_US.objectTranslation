@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TRANSACTION</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TRANSACTIONS</value>
+    </caseValues>
+    <fields>
+        <label><!-- INCOME TAX --></label>
+        <name>INCOME_TAX__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>TRANSACTIONNAME__c</name>
+        <relationshipLabel><!-- TRANSACTIONS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transaction Mode --></label>
+        <name>transaction_pick__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>cardpayment</masterLabel>
+            <translation><!-- cardpayment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>offline payment</masterLabel>
+            <translation><!-- offline payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>onlinepayment</masterLabel>
+            <translation><!-- onlinepayment --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>MONEY STATUS</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

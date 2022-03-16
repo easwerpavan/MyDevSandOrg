@@ -1,0 +1,33 @@
+<aura:component controller="picklistmatch" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+	
+	 <aura:attribute name="options" type="List" default="[
+
+       {'label': 'Web', 'value': 'Web'},
+       {'label': 'Phone Inquiry	', 'value': 'Phone Inquiry	'},
+       {'label': 'Word of mouth	', 'value': 'Word of mouth	'},  
+       {'label': 'Other', 'value': 'Other'}, 
+       ]"/>
+
+  <aura:attribute name="ques" type="Contact" access="global" default="{'sobjectType' : 'Contact'}" /> 
+  <aura:attribute name="optionChoosenRadio" type="String" default=""/>
+
+    
+
+ <div class = "slds-col slds-size--2-of-2 " style="display: inline;">
+   
+
+ <lightning:radioGroup name="radioGroup"
+    label="which is your Lead-Source"
+    variant="label-inline"
+    options="{!v.options }"
+    value="{!v.optionChoosenRadio }"
+    type="radio"
+    />
+</div>
+
+     <lightning:button label="Submit Ans" 
+                                          class="slds-m-top--medium"
+                                          variant="brand"
+                                          onclick="{!c.handleChange}"/>   
+
+</aura:component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MMOVIE</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MMOVIES</value>
+    </caseValues>
+    <fields>
+        <label><!-- MMALL --></label>
+        <name>MMALL__c</name>
+        <relationshipLabel><!-- MMOVIES --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SSCREEN --></label>
+        <name>SSCREEN__c</name>
+        <relationshipLabel><!-- MMOVIES --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

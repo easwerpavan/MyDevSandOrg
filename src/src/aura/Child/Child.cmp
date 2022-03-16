@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:registerEvent name="sampleCmpEvent" type="c:SampleComponentEvent" />
+    <lightning:card  variant="Narrow">
+    <lightning:button label="Click to fire the event" class="slds-align_absolute-center" variant="brand" onclick="{!c.childComponentEvent}"/>   
+    </lightning:card>
+    </aura:component>

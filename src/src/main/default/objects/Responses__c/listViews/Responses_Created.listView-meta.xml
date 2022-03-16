@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responses_Created</fullName>
+    <columns>NAME</columns>
+    <columns>Question_Master__c</columns>
+    <columns>Answer_Text__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Responses Created</label>
+</ListView>

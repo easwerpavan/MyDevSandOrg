@@ -1,0 +1,83 @@
+<aura:component controller="teammemberclass" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="selectedUsLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="isdeletepopup" type="boolean" default="false"/>
+    <aura:attribute name="count" type="integer" default="0"/>
+    <aura:attribute name="objtmstory" type="Team_Member__c" default="{'sobjectType':'Team_Member__c'}"/>
+    <aura:attribute name="teamdata" type="Object"/>
+    <aura:attribute name="columns" type="List"/>  
+    <aura:attribute name="selecteddeletedrec" type="Team_Member__c"/>
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/> 
+   
+    <lightning:card>
+         <aura:set attribute="title">  
+             <b>Team Members ({!v.count})</b>        
+        </aura:set> 
+        
+        <aura:set attribute="actions">      
+            <lightning:button variant="brand"
+                              label="Add a Team Number"                         
+                              onclick="{!c.addmember}" />          
+        </aura:set>
+         <lightning:datatable
+                           columns="{!v.columns }"
+                           data="{!v.teamdata }"
+                           keyField="id"
+                           onrowaction="{!c.handleRowAction}"/>
+    </lightning:card>  
+        <aura:if isTrue="{!v.isModalOpen}">
+              <!-- Modal/Popup Box starts here-->
+<section   class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">            
+       <!--Modal/Popup Box Body Starts here-->
+      <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+ <c:customLookup objectAPIName="User"  IconName="standard:account" label="Team Member" selectedRecord="{!v.selectedUsLookUpRecord}" /><br/>
+ <lightning:select value="{!v.objtmstory.Role__c}" label="Role"  >
+       
+     <option value="Project Admin">Project Admin</option>
+        <option value="Team Member">Team Member</option>   
+    </lightning:select>               
+                    </div>
+        <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"                                        
+                                          onclick="{!c.Cancel}"/>
+                        <lightning:button variant="brand"
+                                          label="Save"                                       
+                                          onclick="{!c.submitDetails}"/>
+                    </footer>
+            
+         </div>
+         </section>
+         <div class="slds-backdrop slds-backdrop_open"></div>            
+          </aura:if>  
+    <aura:if isTrue="{!v.isdeletepopup}">
+              <!-- Modal/Popup Box starts here-->
+<section   class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">  
+     <!-- Modal/Popup Box Header Starts here-->
+          <header class="slds-modal__header">
+                       
+         <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Delete Team Member</h2>
+                    </header>
+             <!--Modal/Popup Box Body Starts here-->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p>Are you Sure to delete a Team Member Record</p>
+                    </div>
+        <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"                                        
+                                          onclick="{!c.cancelButton }"/>
+                        <lightning:button variant="brand"
+                                          label="Delete"                                       
+                                          onclick="{!c.deleteButton}"/>
+                    </footer>
+            
+         </div>
+         </section>
+         <div class="slds-backdrop slds-backdrop_open"></div>
+          </aura:if>  
+
+</aura:component>

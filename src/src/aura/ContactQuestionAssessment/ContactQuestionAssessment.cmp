@@ -1,0 +1,68 @@
+<!--<aura:component controller="ContactQuestionAssesmentCntrl" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:availableForFlowScreens" 
+                                                                       access="global" >  -->
+    <aura:component controller="ContactQuestionAssesmentCntrl" implements="lightning:availableForFlowScreens" 
+                                                                       access="global" > 
+    <aura:attribute name="ResponseData" type="ContactQuestionAssesmentCntrl.questionwrapperclass"/>
+ <!--   <aura:attribute name="questionMap" type="List" /> -->
+     <aura:attribute name="questionMap" type="Question_Master__c[]"  access="global" />
+    <aura:attribute name="questionslist" type="List" access="global"/>            
+    <aura:attribute name="gender" type="string" access="global"/> 
+    <aura:attribute name="leadsource" type="string" access="global"/> 	
+    <aura:attribute name="value" type="String" access="global"/>
+    <aura:attribute name="options" type="list" access="global"/> 
+    <aura:attribute name="QuestionType" type="string" default="" access="global"/>
+    <aura:attribute name="responseMapNumber" type="List" access="global"/> 
+    <aura:attribute name="responseMapDate" type="List" access="global"/> 
+    <aura:attribute name="responseMapEmail" type="List" access="global"/> 
+    <aura:attribute name="responseMapText" type="List" access="global"/>
+    <aura:attribute name="responseMapTextArea" type="List" access="global" /> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInIt}"/>  
+    
+    <aura:iteration items="{!v.questionMap}" var="eachQuestion" indexVar="key" > 
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Picklist'}">  
+            <lightning:select name="{!eachQuestion.value.questionId}" label="{!eachQuestion.key}">
+                <aura:iteration items="{!eachQuestion.value.responseObject }" var="eachResponse">
+                    <option text="{!eachResponse}" value="{!eachResponse}" selected="{!eachQuestion.value.selectedResponse}"></option>
+                </aura:iteration>
+            </lightning:select>  
+        </aura:if> 
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Radio'}">
+            <lightning:radioGroup name="{!eachQuestion.value.questionId}"
+                                  label="{!eachQuestion.key}"
+                                  value="{!v.value}"
+                                  options="{!eachQuestion.value.responseObject}"
+                                  type="radio"/>    
+        </aura:if>
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Number'}">  
+            <Lightning:input type="Number" name="{!eachQuestion.value.questionId}" value="{!v.responseMapNumber}" label="{!eachQuestion.key}" />
+        </aura:if>
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Date'}"> 
+            <Lightning:input type="Date" name="{!eachQuestion.value.questionId}" value="{!v.responseMapDate}" label="{!eachQuestion.key}" />
+        </aura:if> 
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Email'}"> 
+            <Lightning:input type="Email" name="{!eachQuestion.value.questionId}" value="{!v.responseMapEmail}" label="{!eachQuestion.key}" />
+        </aura:if> 
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Text'}"> 
+            <Lightning:input type="Text" name="{!eachQuestion.value.questionId}" value="{!v.responseMapText}" label="{!eachQuestion.key}" />
+        </aura:if>  
+        
+        <aura:if isTrue="{!eachQuestion.value.questionType == 'Text Area'}">            
+            <Lightning:textarea  name="{!eachQuestion.value.questionId}" value="{!v.responseMapTextArea}" label="{!eachQuestion.key}" />
+        </aura:if>  
+        
+    </aura:iteration>
+    
+    <footer>
+        <div class="slds-align_absolute-center" role="group">  
+            <lightning:button variant="brand" name="save" label="Save" onclick="{!c.save}" />
+        </div>  
+    </footer>
+    
+</aura:component>

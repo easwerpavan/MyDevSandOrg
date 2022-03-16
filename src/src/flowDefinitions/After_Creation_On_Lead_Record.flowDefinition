@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Whenever a new Lead record is inserted in Salesforce, we need a new Case to be created. This new case should be associated with the newly created Lead as a child record. Also, we need to create a new Task related to this newly created Case.
+
+New Lead Created by User/System --&gt; Flow Trigger Is Fired Automatically after Lead is Saved --&gt; Fetch the Record of new Lead in Flow --&gt; Create Child Case for this Lead --&gt; Create a new Task for this Case</description>
+    <masterLabel>After Save(Creation On Lead Record)</masterLabel>
+</FlowDefinition>

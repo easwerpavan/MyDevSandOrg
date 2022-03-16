@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Expenses</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Expenses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>EM_Employee__c</name>
+        <relationshipLabel><!-- Expenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expense Amount --></label>
+        <name>EM_Expense_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- GST Number --></label>
+        <name>EM_GST_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>EM_Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Number --></label>
+        <name>EM_Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Items Purchased --></label>
+        <name>EM_Items_Purchased__c</name>
+    </fields>
+    <layouts>
+        <layout>Expenses Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please Enter valid GST Number --></errorMessage>
+        <name>GST_validation</name>
+    </validationRules>
+</CustomObjectTranslation>

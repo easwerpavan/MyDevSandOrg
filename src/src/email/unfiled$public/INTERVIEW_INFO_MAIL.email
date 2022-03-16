@@ -1,0 +1,4 @@
+HII {!EMPLOYEE__c.CreatedBy}  ,
+
+  
+           YOUR CURRENT JOB INFO IS  {!EMPLOYEE__c.JOB_STATUS__c}

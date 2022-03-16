@@ -1,0 +1,7 @@
+<design:component>
+	 <design:attribute name="questionMap" label="Questions"/> 
+     <design:attribute name="QuestionType" label="Question Type"/>  
+    <design:attribute name="gender" label="genders"/>  
+    <design:attribute name="leadsource" label="leadsources"/>  
+    <design:attribute name="value" label="values"/>     
+</design:component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Develop a process when an Opportunity is created with Amount more than 50000$ then create a task inside
+that opportunity and assign it Account Owner. Also, create a chatter post inside the same opportunity. A big deal opportunity has been created.</description>
+    <masterLabel>After Update (Creating Task Bases on Condition)</masterLabel>
+</FlowDefinition>

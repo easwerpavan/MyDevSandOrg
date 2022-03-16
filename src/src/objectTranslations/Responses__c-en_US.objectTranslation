@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Responses</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Responses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Answer Text --></label>
+        <name>Answer_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Master --></label>
+        <name>Question_Master__c</name>
+        <relationshipLabel><!-- Responses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sorting Number --></label>
+        <name>Sorting_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Responses Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Assesment --></label>
+        <name>Assesment</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Attendance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Attendances</value>
+    </caseValues>
+    <fields>
+        <label><!-- LMS_Employee --></label>
+        <name>LMS_Employee__c</name>
+        <relationshipLabel><!-- Attendances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hours worked --></label>
+        <name>LMS_Hours_worked__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN Time --></label>
+        <name>LMS_IN_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Out Time --></label>
+        <name>LMS_Out_Time__c</name>
+    </fields>
+    <layouts>
+        <layout>Attendance Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

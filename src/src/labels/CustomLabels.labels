@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Education</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Education</shortDescription>
+        <value>This Is a sim[ple message from Education Picklist</value>
+    </labels>
+    <labels>
+        <fullName>SalesforceGroup</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SalesforceGroup</shortDescription>
+        <value>0F95g000000UTNyCAO</value>
+    </labels>
+    <labels>
+        <fullName>WelcomeMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>WelcomeMessage</shortDescription>
+        <value>Have a great day !!!</value>
+    </labels>
+</CustomLabels>

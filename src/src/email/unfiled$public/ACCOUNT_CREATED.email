@@ -1,0 +1,10 @@
+HI,
+ A new account created on {!Lead.CreatedDate} by {!Lead.Name}.
+   INFO:
+      NAME   {!Lead.Name}:
+       EMAIL   {!Lead.Email}":
+       MODILE NO.{!Lead.MobilePhone}:
+MORE DETAILS:
+       {!Lead.Link}
+THANKS
+      {!Contact.CreatedBy}
